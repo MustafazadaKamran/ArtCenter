@@ -3,9 +3,15 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    font-family: Inter;   
+}
+
+html{
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
-    font-family: Inter;
+}
+img{
+    pointer-events: none;
 }
 
 body::-webkit-scrollbar {
@@ -159,7 +165,7 @@ body {
 
 .main .header .search-input.expanded {
     opacity: 1;
-    width: 169px;
+    width: 129px;
     height: 52px;
     align-items: center;
     background: none;
@@ -368,8 +374,9 @@ body {
 }
 
 .wrapper {
-    display: flex;
+    display:flex ;
     overflow: hidden;
+    z-index: 100;
 }
 
 

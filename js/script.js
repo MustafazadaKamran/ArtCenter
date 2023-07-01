@@ -1,44 +1,43 @@
+
+
 let isDown = false;
 let startX;
 let scrollLeft;
 const slider = document.querySelector('.wrapper');
 
 const end = () => {
-    isDown = false;
-   
+	isDown = false;
+  console.log('end')
 }
 
-
 const start = (e) => {
-    isDown = true;
-    startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
+  isDown = true;
+  startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;	
+  console.log('start')
 }
 
 const move = (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-    const dist = (x - startX);
-    slider.scrollLeft = scrollLeft - dist;
-    
+	if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  const dist = (x - startX);
+  slider.scrollLeft = scrollLeft - dist;
+  console.log('moving ', slider.scrollLeft)
 
 }
 
-(() => {    
-    slider.addEventListener('mousedown', start);
-    slider.addEventListener('touchstart', start);
+(() => {
+	slider.addEventListener('mousedown', start);
+	slider.addEventListener('touchstart', start);
 
-    slider.addEventListener('mousemove', move);
-    slider.addEventListener('mousemove', move);
+	slider.addEventListener('mousemove', move);
+	slider.addEventListener('touchmove', move);
 
-    slider.addEventListener('mouseleave', end);
-    slider.addEventListener('mouseup', end);
-    slider.addEventListener('touchend', end);
+	slider.addEventListener('mouseleave', end);
+	slider.addEventListener('mouseup', end);
+	slider.addEventListener('touchend', end);
 })();
-
-
-
 
 
 
