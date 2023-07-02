@@ -7,14 +7,12 @@ const slider = document.querySelector('.wrapper');
 
 const end = () => {
 	isDown = false;
-  console.log('end')
 }
 
 const start = (e) => {
   isDown = true;
   startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;	
-  console.log('start')
 }
 
 const move = (e) => {
@@ -23,8 +21,6 @@ const move = (e) => {
   const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
   const dist = (x - startX);
   slider.scrollLeft = scrollLeft - dist;
-  console.log('moving ', slider.scrollLeft)
-
 }
 
 (() => {

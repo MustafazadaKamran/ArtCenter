@@ -3,7 +3,8 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family: Inter;   
+    font-family: Inter; 
+    
 }
 
 html{
@@ -115,10 +116,10 @@ body {
 }
 
 .main .header .logo img {
-    width: 70.177px;
+    width: 72.177px;
     height: 72px;
     flex-shrink: 0;
-    margin-left: 35px;
+    margin-left: 34px;
     cursor: pointer;
 }
 
@@ -126,10 +127,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 245px;
+    width: 227px;
     height: 104px;
     flex-shrink: 0;
-    gap: 70px;
+    gap: 70px;  
 }
 
 .main .header .search-btn {
@@ -142,15 +143,16 @@ body {
     border: none;
     transform: translateX(60px);
     cursor: pointer;
+    margin-left: 8px;
 }
 
 
-
 .main .header .search-btn img {
-    width: 22.5px;
-    height: 22.5px;
+    width: 24px;
+    height: 23.5px;
     flex-shrink: 0;
-    margin-top: 5px;
+    margin-top: 3px;
+    margin-left: 19px;
 }
 
 
@@ -162,6 +164,17 @@ body {
     border: none;
     transition: all 0.5s ease;
 }
+.main .header .search-btn.expanded {
+    background: none;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: none;
+    transform: translateX(25px);
+    cursor: pointer;
+}
 
 .main .header .search-input.expanded {
     opacity: 1;
@@ -171,12 +184,13 @@ body {
     background: none;
     border: none;
     transition: all 0.5s ease;
+    margin-left: -25px;
 }
 
 
 .main .header .text {
     display: flex;
-    width: 820px;
+    width: 780px;
     height: 104px;
     justify-content: space-between;
     align-items: center;
@@ -189,7 +203,7 @@ body {
 .main .header .text ul li {
 
     display: flex;
-    width: 160px;
+    width: 164px;
     height: 28px;
     padding: 10px 0px;
     align-items: center;
@@ -217,6 +231,7 @@ body {
     height: 104px;
     justify-content: center;
     align-items: center;
+    margin-left: 35px;
 }
 
 .main .header .text-lang ul {
@@ -225,7 +240,7 @@ body {
 
 .main .header .text-lang li {
     display: flex;
-    width: 35px;
+    width: 36.4px;
     height: 48px;
     padding: 5px 0px;
     align-items: center;
@@ -281,6 +296,7 @@ body {
     font-weight: 700;
     margin-left: 57px;
     margin-top: 166px;
+    line-height: 1.205;
 }
 
 /* Section-one end */
@@ -310,7 +326,7 @@ body {
     height: 97px;
     flex-shrink: 0;
     margin-top: 104px;
-    margin-left: 130px;
+    margin-left: 129px;
 }
 
 
